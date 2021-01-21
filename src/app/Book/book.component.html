@@ -1,0 +1,17 @@
+<h1>Welcome to BookApi Application</h1>
+<div>
+    <table border=1>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Department</th>
+            <th>Action</th>
+        </tr>
+        <tr *ngFor="let book of books">
+            <td>{{book.id}}</td>
+            <td>{{book.name}}</td>
+            <td>{{book.department}}</td>
+            <td><button (click)="Edit(book.id)">Edit</button> | <button (click)="DeleteBook(book.id)">Delete</button></td>
+        </tr>
+    </table>
+</div>
